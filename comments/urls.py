@@ -1,3 +1,7 @@
-from django.urls import path
+from rest_framework.routers import SimpleRouter
+from .views import CommentViewSet
 
-urlpatterns = []
+router = SimpleRouter()
+router.register(r'', CommentViewSet, basename='comment')
+
+urlpatterns = router.urls

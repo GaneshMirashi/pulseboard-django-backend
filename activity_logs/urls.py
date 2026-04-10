@@ -1,3 +1,6 @@
 from django.urls import path
+from .views import ActivityLogListView
 
-urlpatterns = []
+urlpatterns = [
+    path('', ActivityLogListView.as_view()),
+]

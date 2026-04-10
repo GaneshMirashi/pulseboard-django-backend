@@ -1,3 +1,7 @@
-from django.urls import path
+from rest_framework.routers import SimpleRouter
+from .views import TeamViewSet
 
-urlpatterns = []
+router = SimpleRouter()
+router.register(r'', TeamViewSet, basename='team')
+
+urlpatterns = router.urls
